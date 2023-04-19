@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+		
+    :root { 
+        --clr: #222327;
+    }
+		
+    body {
+        display: flex;
+        margin-top: 40px;
+        background: var(--clr); 
+    }
+    /* Pasek Nawigacji */
+    .navbarfixed{
+        background: var(--clr);
+        width: 100%;
+        height: 70px;
+       
+    }
+    .navigation {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 45px;
+    }
+
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+
+            .navigation ul li {
+                position: relative;
+                list-style: none;
+                width: 70px;
+                height: 70px;
+                z-index: 1;
+            }
+
+                .navigation ul li a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                    .navigation ul li a .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                        color: var(--clr);
+                    }
+
+                .navigation ul li.active a .icon {
+                    transform: translateY(-32px);
+                }
+
+                .navigation ul li a .text {
+                    position: absolute;
+                    color: var(--clr);
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .navigation ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: #622DC5;
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+    }
+
+        .indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 var(--clr);
+        }
+
+        .indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 var(--clr);
+        }
+
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+		
+	.tekst1 {
+			position: absolute;	
+			top: 150px;
+			left: 500px;
+			color: white;
+			text-align: left;
+			}	
+	.tekst2 {
+			position: absolute;	
+			top: 650px;
+			left: 500px;
+			color: white;
+			text-align: left;
+			}	
+	.tekst3 {
+			position: absolute;	
+			top: 1175px;
+			left: 500px;
+			color: white;
+			text-align: left;
+			}
+	.tekst4 {
+			position: absolute;	
+			top: 1900px;
+			left: 500px;
+			color: white;
+			text-align: left;
+			}	
+			
+			
+				.footer 
+				{
+					display: flex;
+					justify-content: space-evenly;
+					position: absolute;
+					top: 2550px;
+					background-color: white;
+					color: black;
+					text-align: center;
+					width: 100%;
+				}
+				.footer2 
+				{
+					display: flex;
+					justify-content: space-around  ;
+					position: absolute;
+					top: 2575px;
+					background-color: white;
+					color: black;
+					text-align: center;
+					width: 100%;
+				}
+				.FooterButton a:link, a:visited {
+					color: black;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					width: 100px;
+					transition-duration: 0.5s;
+				}
+				.FooterButton a:hover {
+					background-color: #622DC5;
+					color: white;
+				}
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>IzostarGames - Blog</title>
+	<link rel="icon" type="image/x-icon" href="ikona.png">
+</head>
+
+<body>
+   <div class="navbarfixed">
+		<div class="navigation">
+			<ul>
+				<li class="list">
+					<a href="siema .html">
+						<span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+						<span class="text">Home</span>
+					</a>
+				</li>
+
+				<li class="list">
+					<a href="siemaCV.html">
+						<span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+						<span class="text">O nas</span>
+					</a>
+				</li>
+
+				<li class="list ">
+					<a href="siema2.html">
+						<span class="icon active"><ion-icon name="log-in-outline"></ion-icon></span>
+						<span class="text">Logowanie</span>
+					</a>
+				</li>
+
+				<li class="list">
+					<a href="siema4.html">
+						<span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+						<span class="text">Zdjęcia</span>
+					</a>
+				</li>
+
+				<li class="list active">
+					<a href="#">
+						<span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+						<span class="text">Blog</span>
+					</a>
+				</li>
+				<div class="indicator"></div>
+			</ul>
+		</div>
+	</div>
+
+	<div class="tekst1">
+	<h1 id="patchLol"> Opis najnowszego patcha w League of Legends! </h1>
+	<h2> Autor: Misti </h2> <br>
+	<h4> League of Legends otrzymało właśnie aktualizację 13.7, która wprowadziła wiele zmian do gry. <br> 
+	Jednym z najważniejszych dodatków są zmiany w postaciach, które wpłynęły na ich balans. <br><br>
+
+W tej aktualizacji nastąpiły także zmiany w przedmiotach.  Niektóre przedmioty zostały zmienione, <br>
+aby były bardziej przydatne w rozgrywce, a inne zostały znerfowane, aby ograniczyć ich wpływ na grę. <br><br>
+
+Ponadto, aktualizacja wprowadziła kilka kosmetycznych zmian w grze, w tym nowe skórki postaci oraz <br> zmiany 
+w interfejsie użytkownika.  Warto również zauważyć, że wraz z aktualizacją 13.7, wprowadzono <br> zmiany w sezonie 
+rankingu, w tym zmiany w systemie nagród za osiągnięcia w grze. <br><br>
+
+To tylko niektóre z ważniejszych zmian, jakie zostały wprowadzone w aktualizacji 13.7 w League of Legends. <br> Dla pełnego zestawienia zmian, zachęcam do zapoznania się <br>z oficjalnymi notatkami z aktualizacji,  które można znaleźć na stronie League of Legends. 
+</h4>
+   </div>
+   <div class="tekst2">
+	<h1 id="TurniejValo"> Organizowany przez nas turniej Valorant! </h1>
+	<h2> Autor: IzoStar </h2> <br>
+	<h4> Witajcie, gracze! Mamy dla Was świetną wiadomość! <br><br>
+	Portal IzostarGames organizuje turniej w grze Valorant! Turniej odbędzie się już niedługo, <br>
+	a wstęp jest całkowicie wolny dla każdego chętnego. <br><br>
+
+	Turniej rozgrywany będzie w trybie drużynowym i każda drużyna będzie składała się z 5 graczy. 
+	<br> Będzie to doskonała okazja dla was, aby pokazać swoje umiejętności i wykazać się na arenie esportowej. <br><br>
+
+	 Zwycięska drużyna otrzyma atrakcyjne nagrody, w tym cenne przedmioty w grze oraz nagrody rzeczowe <br> ufundowane przez maszą redakcje. <br><br>
+
+	Zapraszamy wszystkich miłośników gier i esportu do udziału w naszym turnieju.
+	<br>Wymagane jest jedynie zarejestrowanie się na stronie IzostarGames oraz zgłoszenie drużyny złożonej z 5 graczy.
+	<br>Nie czekajcie dłużej, zgłaszajcie się już dziś i przygotujcie się na emocjonującą rozgrywkę!	</h4>
+   </div>
+   <div class="tekst3">
+	<h1 id="CSGO2"> CS:GO 2 oficjalnie ogłoszony!  </h1>
+	<h2> Autor: Misti </h2> <br>
+	<h4>Wiele osób w świecie e-sportu od dłuższego czasu czekało na oficjalne ogłoszenie drugiej części popularnej gry CS:GO. <br> Wreszcie wczoraj, podczas corocznego wydarzenia Game Awards, Valve Corporation ogłosiło, że CS:GO 2 jest w produkcji <br> i zostanie wydany w przyszłym roku.<br><br>
+	Od czasu wydania CS:GO w 2012 roku, gra zdobyła ogromną popularność i stała się jedną z najbardziej rozpoznawalnych gier <br> e-sportowych na świecie.  Wiele osób zastanawiało się, czy Valve Corporation wyda drugą część gry, a teraz mamy pewność, <br> że tak się stanie.<br><br>
+	Valve Corporation zapowiedziało, że CS:GO 2 zostanie wydane w przyszłym roku, ale nie podało <br> jeszcze dokładnej daty premiery.  Nie wiadomo również, jakie będą zmiany w porównaniu do oryginalnej gry. <br> Niektórzy fani spekulują, że gra zostanie zoptymalizowana  pod kątem nowych platform sprzętowych, a także że pojawią się <br> nowe tryby gry i postacie.<br><br>
+	Zapowiedź CS:GO 2 wywołała dużą ekscytację wśród fanów gry i świata e-sportu. Wiele osób komentuje na forach i mediach <br> społecznościowych,  że nie mogą doczekać się premiery drugiej części gry i że są ciekawi, jakie zmiany przyniesie.<br><br>
+	Niektórzy jednak zastanawiają się, czy wydanie CS:GO 2 nie będzie negatywnie wpływać na popularność oryginalnej gry.<br> Na ten temat  Valve Corporation na razie się nie wypowiedziało.<br><br>
+	Nie pozostaje nam nic innego, jak czekać na kolejne informacje na temat CS:GO 2 i być może już teraz zacząć <br> trenować swoje umiejętności > w oryginalnej grze, by być gotowym na nowe wyzwania, jakie przyniesie nam <br> druga część gry.  </h4>
+   </div>
+   <div class="tekst4">
+	<h1 id="LN2"> Little Nightmares 2 recenzja! </h1>
+	<h2> Autor: Jiho </h2> <br>
+	<h4> Little Nightmares 2 to kontynuacja popularnej gry z 2017 roku, która wprowadza nas do ponurego, przerażającego świata, <br> pełnego zagadek i tajemnic. Wcielamy się w postać chłopca imieniem Mono, który wyrusza w niebezpieczną podróż, <br> by odkryć mroczne tajemnice miasta, w którym się znajduje. <br><br>
+
+Gra wciąga już od pierwszych chwil i potrafi przykuć uwagę gracza na długie godziny. Rozgrywka składa się z eksploracji, <br> rozwiązywania zagadek i unikania przeszkód, a także walki z niebezpiecznymi przeciwnikami. Atmosfera gry jest naprawdę <br> przerażająca,  dzięki zręcznemu połączeniu muzyki, dźwięków otoczenia i grafiki, która wprost wgniata gracza w mroczny świat gry. <br><br>
+
+Grafika w grze Little Nightmares 2 jest na bardzo wysokim poziomie - twórcy postawili na unikalny styl, który zdecydowanie <br> wyróżnia się na tle innych produkcji. Świat przedstawiony w grze jest pełen szczegółów, co sprawia, że rozgrywka jest jeszcze <br> bardziej przekonująca. <br><br>
+
+Warto również wspomnieć o muzyce - autorzy postawili na minimalizm i skomponowali dźwięki, które wprost wprowadzają <br> gracza w świat gry. Muzyka jest bardzo stonowana i nie przeszkadza w grze, a jednocześnie buduje napięcie i potęguje emocje. <br><br>
+
+Podsumowując, Little Nightmares 2 to gra, która zdecydowanie zasługuje na uwagę. Świetnie zrealizowana grafika, niesamowita <br> muzyka oraz przerażająca atmosfera gry sprawiają, że rozgrywka dostarcza wiele emocji i wciąga na długie godziny. <br><br> Polecam tę grę każdemu, kto lubi mroczne i przerażające gry.  </h4>
+   </div>
+   
+   <div class="footer">
+		<div class="FooterButton"><a href="siema .html"> HOME </a> </div>
+		<div class="FooterButton"><a href="siemaCV.html"> O NAS </a> </div>
+		<div class="FooterButton"><a href="siema2.html"> LOGOWANIE </a> </div>
+		<div class="FooterButton"><a href="siema4.html"> ZDJĘCIA </a> </div>
+		<div class="FooterButton"><a href="siema3.html"> BLOG </a> </div>
+	</div>
+	<div class="footer2">
+		Wszelkie treści publikowane na stronie, takie jak teksty, zdjęcia, filmy, dźwięki oraz grafiki, są chronione prawem autorskim i stanowią własność Marcina Izostara. 
+	</div>
+ 
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach(item =>
+            item.addEventListener('click', activeLink))
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
